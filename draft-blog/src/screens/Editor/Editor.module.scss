@@ -1,0 +1,16 @@
+.container {
+  background: #ebebeb;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.containerInner {
+  margin-top: 50px;
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 10px;
+}
