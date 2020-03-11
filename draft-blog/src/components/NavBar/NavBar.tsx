@@ -8,6 +8,7 @@ const NavBar = () => {
     <div className={Styles.container}>
       <Link to="/">Home</Link>
       <Link to="/editor">Editor</Link>
+      <Link to="/prose-editor">Prose</Link>
     </div>
   );
 };
