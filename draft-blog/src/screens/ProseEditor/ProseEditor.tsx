@@ -8,8 +8,6 @@ import { addListNodes } from "prosemirror-schema-list";
 //@ts-ignore
 import { exampleSetup } from "prosemirror-example-setup";
 
-interface Props {}
-
 // Mix the nodes from prosemirror-schema-list into the basic schema to
 // create a schema with list support.
 const mySchema = new Schema({
@@ -17,7 +15,7 @@ const mySchema = new Schema({
   marks: schema.spec.marks
 });
 
-const ProseEditor = ({}: Props) => {
+const ProseEditor = () => {
   const [editorState, setEditorState] = useState<EditorState>(
     EditorState.create({
       schema: mySchema,

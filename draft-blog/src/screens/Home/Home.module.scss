@@ -1,0 +1,36 @@
+@import "../../styles/fonts";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.contentContainer {
+  display: flex;
+}
+
+.verticalDivider {
+  margin: 0 15px;
+  width: 2px;
+  background: black;
+}
+
+.leftSide {
+  text-align: right;
+  font-size: 80px;
+  @include space-bold;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  & div {
+    transition: transform 0.5s;
+    &:hover {
+      transform: translate(5px, 0);
+    }
+  }
+}
