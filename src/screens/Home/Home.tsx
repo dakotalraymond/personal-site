@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import Styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../components/ThemeProvider/ThemeProvider";
+import { blueRed, colors } from "../../constants";
 
 const Home = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -10,7 +11,19 @@ const Home = () => {
   return (
     <div className={Styles.container}>
       <div className={Styles.contentContainer}>
-        <div className={Styles.leftSide}>
+        <div
+          className={Styles.leftSide}
+          onClick={e => {
+            e.preventDefault();
+            e.stopPropagation();
+            let newTheme = theme;
+            while (theme.background === newTheme.background) {
+              newTheme =
+                colors[Math.floor(Math.random() * Math.floor(colors.length))];
+            }
+            setTheme(newTheme);
+          }}
+        >
           <div>Dakota</div>
           <div>Raymond</div>
         </div>
@@ -41,17 +54,16 @@ const Home = () => {
             <Link to="/coming-soon">Check out my passion projects</Link>
           </div>
           <div>
-            <Link to="/coming-soon">Read my blog</Link>
+            <a
+              href="https://askalmanac.com/users/354/dakota-raymond"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read my blog
+            </a>
           </div>
           <div>
             <Link to="/coming-soon">Contact Me</Link>
-          </div>
-          <div
-            onClick={() => {
-              setTheme({ background: "green", color: "red" });
-            }}
-          >
-            Change color
           </div>
         </div>
       </div>

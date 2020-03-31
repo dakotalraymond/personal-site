@@ -19,7 +19,14 @@
 .leftSide {
   text-align: right;
   font-size: 80px;
+  cursor: pointer;
   @include space-bold;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 .rightSide {
