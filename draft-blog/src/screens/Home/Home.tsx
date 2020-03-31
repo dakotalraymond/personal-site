@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../components/ThemeProvider/ThemeProvider";
 
 const Home = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <div className={Styles.container}>
       <div className={Styles.contentContainer}>
@@ -11,7 +14,10 @@ const Home = () => {
           <div>Dakota</div>
           <div>Raymond</div>
         </div>
-        <div className={Styles.verticalDivider} />
+        <div
+          className={Styles.verticalDivider}
+          style={{ background: theme.color }}
+        />
         <div className={Styles.rightSide}>
           <div>
             <a
@@ -39,6 +45,13 @@ const Home = () => {
           </div>
           <div>
             <Link to="/coming-soon">Contact Me</Link>
+          </div>
+          <div
+            onClick={() => {
+              setTheme({ background: "green", color: "red" });
+            }}
+          >
+            Change color
           </div>
         </div>
       </div>
