@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./styles/reset.scss";
 import "./styles/fonts.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
