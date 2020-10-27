@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import ComingSoon from "./screens/ComingSoon/ComingSoon";
 import { ThemeContext } from "./components/ThemeProvider/ThemeProvider";
+import { BlogEdit } from "./screens/BlogEdit/BlogEdit";
 
 const App = () => {
   const [theme, setTheme] = useState({ background: "white", color: "black" });
@@ -15,11 +16,12 @@ const App = () => {
         <div
           style={{
             background: theme.background,
-            color: theme.color
+            color: theme.color,
           }}
         >
           <Switch>
             <Route path="/coming-soon" component={ComingSoon} />
+            <Route path="/blog-edit" component={BlogEdit} />
             <Route path="/" component={Home} />
           </Switch>
         </div>

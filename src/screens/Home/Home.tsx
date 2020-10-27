@@ -13,7 +13,7 @@ const Home = () => {
       <div className={Styles.contentContainer}>
         <div
           className={Styles.leftSide}
-          onClick={e => {
+          onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
             let newTheme = theme;
@@ -54,13 +54,7 @@ const Home = () => {
             <Link to="/coming-soon">Check out my passion projects</Link>
           </div>
           <div>
-            <a
-              href="https://askalmanac.com/users/354/dakota-raymond"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read my blog
-            </a>
+            <Link to="/blog-edit">Read my blog</Link>
           </div>
           <div>
             <Link to="/coming-soon">Contact Me</Link>

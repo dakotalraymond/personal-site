@@ -1,0 +1,11 @@
+@import "../../styles/fonts";
+
+.container {
+}
+
+.editorContainer {
+}
+
+:global(.ql-container) {
+  @include space-regular;
+}
