@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import Styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../components/ThemeProvider/ThemeProvider";
-import { blueRed, colors } from "../../constants";
+import { colors } from "../../constants";
 
 const Home = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -13,7 +13,7 @@ const Home = () => {
       <div className={Styles.contentContainer}>
         <div
           className={Styles.leftSide}
-          onClick={e => {
+          onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();
             let newTheme = theme;
